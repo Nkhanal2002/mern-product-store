@@ -39,10 +39,10 @@ const CreatePage = () => {
       <h1 className="text-2xl sm:text-3xl text-center py-3 my-5 from-cyan-500 to-blue-600 bg-gradient-to-r bg-clip-text text-transparent font-bold">
         Create New Product
       </h1>
-      <section className="main-container bg-slate-100 mx-auto p-4 rounded-md shadow-md w-[90%] sm:max-w-[50%]">
+      <section className="main-container bg-slate-100 dark:bg-background dark:border mx-auto p-4 rounded-md shadow-md w-[90%] sm:max-w-[50%]">
         <div>
           <input
-            className="w-full border border-black p-3 bg-slate-50 rounded-xl mb-3 text-lg sm:text-xl"
+            className="w-full border border-black p-3 bg-slate-50 dark:bg-gray-800 rounded-xl mb-3 text-lg sm:text-xl"
             type="text"
             name="name"
             value={newProduct.name}
@@ -54,7 +54,7 @@ const CreatePage = () => {
         </div>
         <div>
           <input
-            className="w-full border border-black p-3 bg-slate-50 rounded-xl mb-3 text-lg sm:text-xl"
+            className="w-full border border-black p-3 bg-slate-50 dark:bg-gray-800 rounded-xl mb-3 text-lg sm:text-xl"
             type="number"
             name="price"
             value={newProduct.price}
@@ -66,7 +66,7 @@ const CreatePage = () => {
         </div>
         <div>
           <input
-            className="w-full border border-black p-3 bg-slate-50 rounded-xl mb-3 text-lg sm:text-xl"
+            className="w-full border border-black p-3 bg-slate-50 dark:bg-gray-800 rounded-xl mb-3 text-lg sm:text-xl"
             type="text"
             name="productImage"
             value={newProduct.productImage}

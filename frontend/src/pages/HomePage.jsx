@@ -38,7 +38,7 @@ const HomePage = () => {
         />
       )}
       <div className="products-container grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 place-items-center gap-y-4 sm:gap-y-10">
-        {products.map((product) => (
+        {products?.map((product) => (
           <ProductCard
             key={product._id}
             product={product}
