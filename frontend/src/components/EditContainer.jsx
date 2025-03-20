@@ -29,7 +29,7 @@ const EditContainer = ({ selectedProduct, onCloseClick }) => {
   };
 
   return (
-    <section className="w-[90%] absolute top-12 sm:top-20 left-1/2 transform -translate-x-1/2 z-20 p-4 bg-slate-100 rounded-lg sm:w-[50%]">
+    <section className="w-[90%] absolute top-12 sm:top-20 left-1/2 transform -translate-x-1/2 z-20 p-4 bg-slate-100 dark:bg-slate-900 dark:border rounded-lg sm:w-[50%]">
       <FaCircleXmark
         className="text-xl sm:text-3xl absolute right-[-8px] top-[-8px] text-purple-600 hover:text-red-600 cursor-pointer"
         onClick={onCloseClick}
@@ -39,7 +39,7 @@ const EditContainer = ({ selectedProduct, onCloseClick }) => {
       </div>
       <div className="form">
         <input
-          className="w-full border border-black p-3 bg-slate-50 rounded-xl mb-3 text-lg sm:text-xl"
+          className="w-full border border-black p-3 bg-slate-50 dark:bg-slate-700 rounded-xl mb-3 text-lg sm:text-xl"
           type="text"
           value={updatedProduct.name}
           onChange={(e) =>
@@ -47,7 +47,7 @@ const EditContainer = ({ selectedProduct, onCloseClick }) => {
           }
         />
         <input
-          className="w-full border border-black p-3 bg-slate-50 rounded-xl mb-3 text-lg sm:text-xl"
+          className="w-full border border-black p-3 bg-slate-50 dark:bg-slate-700 rounded-xl mb-3 text-lg sm:text-xl"
           type="number"
           value={updatedProduct.price}
           onChange={(e) =>
@@ -55,7 +55,7 @@ const EditContainer = ({ selectedProduct, onCloseClick }) => {
           }
         />
         <input
-          className="w-full border border-black p-3 bg-slate-50 rounded-xl mb-3 text-lg sm:text-xl"
+          className="w-full border border-black p-3 bg-slate-50 dark:bg-slate-700 rounded-xl mb-3 text-lg sm:text-xl"
           type="text"
           value={updatedProduct.productImage}
           onChange={(e) =>
