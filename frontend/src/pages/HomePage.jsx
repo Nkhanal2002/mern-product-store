@@ -81,22 +81,23 @@ const HomePage = () => {
 
 const ProductCardSkeleton = () => {
   return (
-    <div className="w-[20rem] h-[28rem] rounded-lg border border-gray-200 overflow-hidden flex flex-col">
-      {/* Image skeleton */}
-      <Skeleton className="w-full h-[12rem] rounded-none" />
+    <div className="dark:border-2 rounded-md shadow-md w-[20rem] overflow-hidden">
+      {/* Image skeleton*/}
+      <Skeleton className="w-full h-[300px] rounded-md" />
 
-      {/* Content container */}
-      <div className="p-4 flex flex-col flex-grow">
-        {/* Title */}
-        <Skeleton className="h-7 w-3/4 mb-2" />
+      {/* Product info container */}
+      <div className="p-2">
+        {/* Product*/}
+        <Skeleton className="h-7 w-4/5 rounded-md" />
 
         {/* Price */}
-        <Skeleton className="h-6 w-1/4 mb-3" />
+        <Skeleton className="h-6 w-1/4 mt-3 rounded-md" />
 
-        {/* Buttons */}
-        <div className="flex gap-2 mt-auto">
-          <Skeleton className="h-10 w-1/2 rounded-md" />
-          <Skeleton className="h-10 w-1/2 rounded-md" />
+        {/* Buttons container*/}
+        <div className="flex items-center gap-x-3 mt-5">
+          {/* Two circular button skeletons */}
+          <Skeleton className="w-10 h-10 rounded-full" />
+          <Skeleton className="w-10 h-10 rounded-full" />
         </div>
       </div>
     </div>
