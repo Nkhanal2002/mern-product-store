@@ -81,9 +81,9 @@ const HomePage = () => {
 
 const ProductCardSkeleton = () => {
   return (
-    <div className="dark:border-2 rounded-md shadow-md w-[20rem] overflow-hidden">
+    <div className="dark:border-2 rounded-md shadow-md w-[20rem] overflow-hidden animate-pulse">
       {/* Image skeleton*/}
-      <Skeleton className="w-full h-[300px] rounded-md" />
+      <Skeleton className="w-full h-[220px] rounded-md" />
 
       {/* Product info container */}
       <div className="p-2">

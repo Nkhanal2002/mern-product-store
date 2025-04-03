@@ -1,11 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-const ThemeProviderProps = {
-  children: undefined,
-  defaultTheme: "system",
-  storageKey: "vite-ui-theme",
-};
-
 const initialState = {
   theme: "system",
   setTheme: () => null,
