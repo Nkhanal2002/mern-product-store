@@ -37,15 +37,22 @@ const HomePage = () => {
           onCloseClick={handleCloseClick}
         />
       )}
-      <div className="products-container grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 place-items-center gap-y-4 sm:gap-y-10">
-        {products?.map((product) => (
-          <ProductCard
-            key={product._id}
-            product={product}
-            onEditClick={() => handleEditClick(product)}
-          />
-        ))}
-      </div>
+
+      {products.length === 0 ? (
+        <p className="text-center mx-auto font-bold sm:text-2xl">
+          😢 No Products to View!
+        </p>
+      ) : (
+        <div className="products-container grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 place-items-center gap-y-4 sm:gap-y-10">
+          {products?.map((product) => (
+            <ProductCard
+              key={product._id}
+              product={product}
+              onEditClick={() => handleEditClick(product)}
+            />
+          ))}
+        </div>
+      )}
     </main>
   );
 };

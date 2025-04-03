@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaCircleXmark } from "react-icons/fa6";
 import { useProductStore } from "../store/product.js";
-
+import { toast } from "sonner";
 const EditContainer = ({ selectedProduct, onCloseClick }) => {
   const { updateProduct } = useProductStore();
 
@@ -24,8 +24,28 @@ const EditContainer = ({ selectedProduct, onCloseClick }) => {
   }, [selectedProduct]);
 
   const handleProductUpdate = async () => {
-    await updateProduct(selectedProduct._id, updatedProduct);
-    onCloseClick();
+    // Check if any values have changed
+    const hasChanges = Object.keys(updatedProduct).some(
+      (key) => updatedProduct[key] !== selectedProduct[key]
+    );
+
+    if (!hasChanges) {
+      toast.info("No changes were made to the product.");
+      return;
+    }
+
+    try {
+      const result = await updateProduct(selectedProduct._id, updatedProduct);
+      if (result.success) {
+        toast.success("Product has been successfully updated!");
+        onCloseClick();
+      } else {
+        toast.error("Update failed.");
+      }
+    } catch (error) {
+      console.error("Failed to update the product:", error);
+      toast.error("Error while updating the product!");
+    }
   };
 
   return (

@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage.jsx";
 import CreatePage from "./pages/CreatePage.jsx";
 import Footer from "./components/Footer.jsx";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/sonner";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/create" element={<CreatePage />}></Route>
         </Routes>
+        <Toaster />
         <Footer />
       </ThemeProvider>
     </>
