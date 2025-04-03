@@ -36,7 +36,7 @@ const EditContainer = ({ selectedProduct, onCloseClick }) => {
 
     try {
       const result = await updateProduct(selectedProduct._id, updatedProduct);
-      if (result.success) {
+      if (result && result.success) {
         toast.success("Product has been successfully updated!");
         onCloseClick();
       } else {
